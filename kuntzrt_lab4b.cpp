@@ -40,7 +40,6 @@ int main() {
         cout << die1 << " " << die2 << endl;
         sum = die1 + die2;
         if ((sum == 4) || (sum == 6) || (sum == 12) || (sum == 8)) {
-            cout << "Tie!" << endl;
             cout << "Roll again!" << endl;
         } else if ((sum == 7) || (sum == 9) || (sum == 11)) {
             cout << "Win!" << endl;
