@@ -6,6 +6,9 @@
 //  Copyright © 2020 Rachel Kuntz. All rights reserved.
 //
 
+// This program rolls two dice and tell you whether
+// you won, lost, or tied. You might roll again.
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -36,7 +39,7 @@ int main() {
         // roll dice
         cout << die1 << " " << die2 << endl;
         sum = die1 + die2;
-        if ((sum == 4) || (sum == 6) || (sum == 12)) {
+        if ((sum == 4) || (sum == 6) || (sum == 12) || (sum == 8)) {
             cout << "Tie!" << endl;
             cout << "Roll again!" << endl;
         } else if ((sum == 7) || (sum == 9) || (sum == 11)) {
@@ -44,11 +47,6 @@ int main() {
             winning = 1;
         } else if ((sum == 2) || (sum == 3) || (sum == 5)) {
             cout << "Lose!" << endl;
-            losing = 1;
-        } else {
-            cout << "You managed to roll " << sum
-                 << " and broke the game!" << endl;
-            winning = 1;
             losing = 1;
         }
     } while (losing == 0 && winning == 0);
